@@ -19,6 +19,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Separator from './components/Separator';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -60,7 +61,6 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -74,7 +74,6 @@ const App: () => Node = () => {
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
           </Section>
-
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
@@ -103,7 +102,6 @@ const styles = StyleSheet.create({
 
   sectionTitle: {
     fontSize: 24,
-
     fontWeight: '600',
   },
 
