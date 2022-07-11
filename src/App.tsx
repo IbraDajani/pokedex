@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import styled from 'styled-components/native';
+import Icon from './components/Icon';
 
 export const Container = styled.View`
   flex: 1;
@@ -11,7 +12,7 @@ export const Container = styled.View`
 const App: React.FC = () => {
   return (
     <View>
-      <Text>sdadsa</Text>
+      <Icon icon="filter" activeColor="black" />
     </View>
   );
 };
