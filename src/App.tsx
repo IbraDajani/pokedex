@@ -1,7 +1,6 @@
 import React from 'react';
-import {View} from 'react-native';
 import styled from 'styled-components/native';
-import Icon from './components/Icon';
+import Home from './screens/Home';
 
 export const Container = styled.View`
   flex: 1;
@@ -10,11 +9,7 @@ export const Container = styled.View`
 // import { Container } from './styles';
 
 const App: React.FC = () => {
-  return (
-    <View>
-      <Icon icon="filter" activeColor="black" />
-    </View>
-  );
+  return <Home />;
 };
 
 export default App;
