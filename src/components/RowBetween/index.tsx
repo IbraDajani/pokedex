@@ -3,8 +3,8 @@ import React from 'react';
 import {Container} from './styles';
 import {Props} from './types';
 
-const Between = ({children, style}: Props) => {
+const RowBetween = ({children, style}: Props) => {
   return <Container style={style}>{children}</Container>;
 };
 
-export default Between;
+export default RowBetween;
