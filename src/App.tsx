@@ -22,6 +22,7 @@ import {
 
 import Row from './components/Row';
 import Separator from './components/Separator';
+import Between from './components/Row Between';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
