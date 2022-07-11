@@ -61,7 +61,6 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      {/*
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -89,15 +88,7 @@ const App: () => Node = () => {
 
           <LearnMoreLinks />
         </View>
-      </ScrollView> */}
-      <View
-        style={{
-          flexDirection: 'row',
-        }}>
-        <Text>bla bla BLA </Text>
-        <Separator width={20} />
-        <Text>bla bla BLA2</Text>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
