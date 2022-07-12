@@ -1,14 +1,11 @@
 import React from 'react';
-import {View} from 'react-native';
-import Icon from '../../components/Icon';
+import Text from '../../components/Text';
 import {Container} from './styles';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <View>
-        <Icon icon="filter" activeColor="black" />
-      </View>
+      <Text size={40}>Home Screen</Text>
     </Container>
   );
 };
