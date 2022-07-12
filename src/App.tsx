@@ -1,16 +1,8 @@
 import React from 'react';
-import {View} from 'react-native';
-import styled from 'styled-components/native';
-import Icon from './components/Icon';
+import Home from './screens/Home';
 
 const App: React.FC = () => {
-
-  return (
-    <View>
-      <Icon icon="filter" activeColor="black" />
-    </View>
-  );
+  return <Home />;
 };
-
 
 export default App;
