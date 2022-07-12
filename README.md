@@ -16,7 +16,7 @@
  
  
 [React Native](https://reactnative.dev)
-- Version ~> "0.66.4"
+- Version ~> "0.68.2"
 
 
 ## :pushpin: Running
