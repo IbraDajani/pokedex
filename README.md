@@ -18,6 +18,11 @@
 [React Native](https://reactnative.dev)
 - Version ~> "0.68.2"
 
+[Styled Components](https://styled-components.com/docs)
+- Version ~> "^5.3.5"
+
+[React Navigation](https://reactnavigation.org/docs/typescript/)
+- Version ~> "^6.0.11"
 
 ## :pushpin: Running
 
