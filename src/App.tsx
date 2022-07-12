@@ -1,9 +1,13 @@
 import React from 'react';
-import Home from './screens/Home';
-import Internal from './screens/Internal';
+import {NavigationContainer} from '@react-navigation/native';
+import Routes from './navigation/routes';
 
 const App: React.FC = () => {
-  return <Home />;
+  return (
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
+  );
 };
 
 export default App;
