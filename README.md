@@ -40,7 +40,6 @@ app
 |  ├─ @types             # Contains all global definitions of types and interfaces
 |  ├─ assets             # Contains Js bundles assets. e.g: icons, splash, images etc...
 |  ├─ components         # Contains all global react components
-|  ├─ context            # All contexts
 |  ├─ constants          # Constants files
 |  ├─ navigation
 |  ├─ screens
