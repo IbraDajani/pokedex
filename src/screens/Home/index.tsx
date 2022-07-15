@@ -1,17 +1,28 @@
 import React from 'react';
-import {Pressable} from 'react-native';
-import Text from '../../components/Text';
+import {FlatList, StatusBar} from 'react-native';
 import {Container} from './styles';
-import {useNavigation} from '@react-navigation/native';
+import PokemonCard from '../../components/PokemonCard';
+import {apiJSON} from '../../utils/apiMockData';
+import Separator from '../../components/Separator';
 
 const Home: React.FC = () => {
-  const {navigate} = useNavigation();
   return (
-    <Container>
-      <Pressable onPress={() => navigate('Internal')}>
-        <Text size={40}>Home Screen</Text>
-      </Pressable>
-    </Container>
+    <>
+      <StatusBar
+        backgroundColor="transparent"
+        translucent
+        barStyle="dark-content"
+      />
+      <Container>
+        <FlatList
+          data={apiJSON}
+          renderItem={({item}) => <PokemonCard item={item} />}
+          keyExtractor={(item, index) => `${item.id}-${index}-pokemon`}
+          numColumns={2}
+          ItemSeparatorComponent={() => <Separator height={10} />}
+        />
+      </Container>
+    </>
   );
 };
 

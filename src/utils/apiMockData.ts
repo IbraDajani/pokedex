@@ -1,3 +1,24 @@
+export const colorByTypes = {
+  Fire: '#800000',
+  Water: '#016fb9',
+  Grass: '#548c2f',
+  Electric: '#f8c630',
+  Ice: 'cyan',
+  Fighting: 'orange',
+  Poison: 'purple',
+  Ground: '#fdad5c',
+  Flying: '#f2c14e',
+  Psychic: 'pink',
+  Bug: '#62c370',
+  Rock: '#c0b7b1',
+  Ghost: '#2A0D5D',
+  Dark: 'brown',
+  Dragon: 'darkred',
+  Steel: 'lightblue',
+  Fairy: '#ffa69e',
+  Normal: '#e0be36 ',
+};
+
 export const apiJSON = [
   {
     id: 1,
@@ -141,7 +162,7 @@ export const apiJSON = [
     id: 6,
     num: '006',
     name: 'Charizard',
-    img: 'http://www.serebii.net/pokemongo/pokemon/006.png',
+    img: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png',
     type: ['Fire', 'Flying'],
     height: '1.70 m',
     weight: '90.5 kg',
