@@ -30,7 +30,7 @@ const Button = ({
         </AbsoluteIcon>
       )}
       <Title color={colorByMode}>{children}</Title>
-      {loading && <Loading />}
+      {loading && <Loading color={colorByMode} />}
     </Container>
   );
 };
