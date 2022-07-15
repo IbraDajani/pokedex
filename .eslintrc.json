@@ -29,7 +29,7 @@
         "prettier/prettier": "error",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extensio": [1, {"extensions": [".tsx"]}],
+        "react/jsx-filename-extensio": [1, {"extensions": [".tsx,ts,jsx,js"]}],
         "import/prefer-default-export": "off",
         "import/extensions": [
             "error",
