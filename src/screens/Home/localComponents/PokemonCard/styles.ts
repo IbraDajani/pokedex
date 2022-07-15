@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import Text from '../Text';
+import Text from '../../../../components/Text';
 import {ColorProps} from './types';
 
 export const Container = styled.TouchableOpacity<ColorProps>`
@@ -13,10 +13,12 @@ export const Container = styled.TouchableOpacity<ColorProps>`
   position: relative;
   overflow: hidden;
 `;
+
 export const TextName = styled(Text).attrs({
   size: 18,
   color: 'white',
 })``;
+
 export const TextType = styled(Text).attrs({
   size: 12,
   color: 'white',
