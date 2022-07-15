@@ -15,6 +15,7 @@ const Home: React.FC = () => {
         keyExtractor={(item, index) => `${item.id}-${index}-pokemon`}
         numColumns={2}
         ItemSeparatorComponent={() => <Separator height={10} />}
+        showsVerticalScrollIndicator={false}
       />
     </Container>
   );

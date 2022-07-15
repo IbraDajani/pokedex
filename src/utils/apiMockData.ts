@@ -1,8 +1,8 @@
 export const colorByTypes = {
-  Fire: '#800000',
-  Water: '#016fb9',
-  Grass: '#548c2f',
-  Electric: '#f8c630',
+  Fire: '#fc7979',
+  Water: '#76bdfe',
+  Grass: '#48d0b0',
+  Electric: '#ffd86f',
   Ice: 'cyan',
   Fighting: 'orange',
   Poison: 'purple',
