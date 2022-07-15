@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {FlatList} from 'react-native';
 import {Container} from './styles';
