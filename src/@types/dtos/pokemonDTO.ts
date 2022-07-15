@@ -21,3 +21,6 @@ export interface PokemonDTO {
   weaknesses?: string[];
   next_evolution?: NextEvolution[];
 }
+export interface RoutePokemonDTO {
+  item: PokemonDTO | undefined;
+}
