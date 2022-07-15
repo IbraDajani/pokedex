@@ -8,27 +8,25 @@
     Pokemon
 </h1>
 
-
 <h2 align='center'> This Project is meant to learn the React-Native Framework </h2>
 
-
-
- 
- 
 [React Native](https://reactnative.dev)
+
 - Version ~> "0.68.2"
 
 [Styled Components](https://styled-components.com/docs)
+
 - Version ~> "^5.3.5"
 
 [React Navigation](https://reactnavigation.org/docs/typescript/)
+
 - Version ~> "^6.0.11"
 
 ## :pushpin: Running
 
 - Pre running (Android/Ios)
   - Run `npm install`
-- IOS: 
+- IOS:
   - Run `npx pod-install && npx react-native run-ios`
 - Android:
   - Run `npx react-native run-android`
