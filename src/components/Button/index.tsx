@@ -1,13 +1,36 @@
-import React from 'react';
-
+import React, {useMemo} from 'react';
 import {ButtonProps} from './types';
-import {Container} from './styles';
-import Text from '../Text';
 
-const Button = ({onPress, ...rest}: ButtonProps) => {
+import {AbsoluteIcon, Container, Loading, Title} from './styles';
+import Icon from '../Icon';
+const Button = ({
+  onPress,
+  children,
+  icon,
+  loading,
+  mode = 'contained',
+  color = 'red',
+  ...rest
+}: ButtonProps) => {
+  const colorByMode = useMemo(() => {
+    return mode === 'outlined' ? color : 'white';
+  }, [mode, color]);
+
   return (
-    <Container {...rest} onPress={onPress}>
-      <Text>sdsadas</Text>
+    <Container
+      borderColor={color}
+      mode={mode}
+      color={color}
+      onPress={onPress}
+      disabled={loading}
+      {...rest}>
+      {!!icon && (
+        <AbsoluteIcon>
+          <Icon icon={icon} size={20} activeColor="black" />
+        </AbsoluteIcon>
+      )}
+      <Title color={colorByMode}>{children}</Title>
+      {loading && <Loading color={colorByMode} />}
     </Container>
   );
 };
