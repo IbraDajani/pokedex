@@ -47,11 +47,5 @@ export const BackgroundImg = styled.ImageBackground`
   align-items: center;
   left: 75px;
   top: 25px;
-  opacity: 0.6;
+  opacity: 0.3;
 `;
-
-// // justify-content: center;
-// // align-items: center;
-// // width: 60px;
-// // height: 20px;
-// // background-color: cyan;
