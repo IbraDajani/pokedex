@@ -2,14 +2,11 @@ import React from 'react';
 
 import {Container, HeaderImageLogo, HeaderLogo} from './styles';
 
-import headerLogo from '../../assets/images/headerLogo.gif';
-
 import Text from '../../components/Text';
 
 import Separator from '../../components/Separator';
 
 import Button from '../../components/Button';
-import Loading from '../../components/Loading';
 
 const Login: React.FC = () => {
   return (
