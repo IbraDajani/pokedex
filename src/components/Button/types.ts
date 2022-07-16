@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacityProps} from 'react-native';
-import {NameIconTypes} from '../../constants/icons';
+import {NameIconTypes} from '~/constants/icons';
 
 type Mode = 'outlined' | 'contained';
 
