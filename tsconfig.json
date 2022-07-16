@@ -7,6 +7,11 @@
     "jsx": "react-native",
     "lib": ["es2017"],
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "rootDirs":["src"],
     "noEmit": true,
     "strict": true,
     "target": "esnext"

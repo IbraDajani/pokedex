@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import Separator from '../../../../components/Separator';
+import Separator from '~/components/Separator';
 import {
   BackgroundImg,
   Container,
@@ -9,7 +9,7 @@ import {
   TextType,
 } from './styles';
 import {Props} from './types';
-import pokeBallImage from '../../../../assets/images/pokeball.png';
+import pokeBallImage from '~/assets/images/pokeball.png';
 import usePokemonCardController from './usePokemonCardController';
 
 const PokemonCard = ({item}: Props) => {
