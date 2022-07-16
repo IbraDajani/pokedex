@@ -8,11 +8,11 @@ export const Container = styled.View`
 export const HeaderLogo = styled.View`
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  flex: 1;
 `;
 
 export const HeaderImageLogo = styled.Image`
-  width: 100%
+  width: 100%;
   height: 210px;
   justify-content: center;
   align-items: center;
