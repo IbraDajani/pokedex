@@ -3,6 +3,7 @@ import styled, {css} from 'styled-components/native';
 import {ContainerProps, TitleProps} from './types';
 
 export const Container = styled.TouchableOpacity<ContainerProps>`
+  width: 100%;
   padding: 12px 0 12px 0;
 
   ${({paddingHorizontal}) => {

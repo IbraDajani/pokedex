@@ -11,19 +11,21 @@ import Button from '../../components/Button';
 const Login: React.FC = () => {
   return (
     <Container>
+      <HeaderImageLogo source={require('../../assets/images/headerLogo.gif')} />
       <HeaderLogo>
-        <HeaderImageLogo
-          source={require('../../assets/images/headerLogo.gif')}
-        />
-
         <Separator height={100} />
 
-        <Text isBold size={20}>
+        {/* <Text isBold size={20}>
           Sing up with
         </Text>
 
         <Separator height={20} />
 
+        <Separator height={20} />
+
+        <Text color="green" size={18}>
+          Privacy Policy
+        </Text> */}
         <Button>
           <Text>dsada</Text>
         </Button>
@@ -33,12 +35,6 @@ const Login: React.FC = () => {
         <Button>
           <Text>dsada</Text>
         </Button>
-
-        <Separator height={20} />
-
-        <Text color="green" size={18}>
-          Privacy Policy
-        </Text>
       </HeaderLogo>
     </Container>
   );
