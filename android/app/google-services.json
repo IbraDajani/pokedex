@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "224819431993",
+    "project_id": "pokedex-f23fe",
+    "storage_bucket": "pokedex-f23fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224819431993:android:beeda728adf314bf2a5be8",
+        "android_client_info": {
+          "package_name": "com.pokedex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224819431993-rj81vcaingo2a2s5t6b8hqgdn86dlr63.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pokedex",
+            "certificate_hash": "a1ba2bde6d6cd6314683f8e585e443700be32c87"
+          }
+        },
+        {
+          "client_id": "224819431993-mgcka63re3b5juit5js2gslrlrgi0qvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK-nNc6hy_fRZ7zdYgG52kWD3_m8sSGLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224819431993-mgcka63re3b5juit5js2gslrlrgi0qvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
