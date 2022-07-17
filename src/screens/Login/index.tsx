@@ -27,7 +27,6 @@ const Login: React.FC = () => {
         <Text color="#040403" size={18}>
           Privacy Policy
         </Text>
-        {/* <Lottie source={Pokeball} autoPlay loop /> */}
       </HeaderLogo>
     </Container>
   );
