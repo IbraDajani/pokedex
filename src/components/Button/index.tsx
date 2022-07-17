@@ -21,7 +21,6 @@ const Button = ({
 
   const spinValue = new Animated.Value(0);
 
-  // Next, interpolate beginning and end values (in this case 0 and 1)
   const spin = spinValue.interpolate({
     inputRange: [0, 1],
     outputRange: ['0deg', '360deg'],
