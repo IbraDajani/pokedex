@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import Text from '../../../../components/Text';
+import Text from '~/components/Text';
 import {ColorProps} from './types';
 
 export const Container = styled.TouchableOpacity<ColorProps>`

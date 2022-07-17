@@ -1,5 +1,5 @@
 import React from 'react';
-import icons from '../../constants/icons';
+import icons from '~/constants/icons';
 import {Container} from './styles';
 import {IconProps} from './types';
 
