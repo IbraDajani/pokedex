@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useCallback, useEffect, useState} from 'react';
 import {StatusBar} from 'react-native';
 import {Container, HeaderImageLogo, HeaderLogo} from './styles';
