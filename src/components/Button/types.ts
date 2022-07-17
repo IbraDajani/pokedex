@@ -12,6 +12,7 @@ export interface ButtonProps extends TouchableOpacityProps {
   icon?: NameIconTypes;
   paddingHorizontal?: number;
   paddingVectical?: number;
+  shadow?: boolean;
 }
 
 /**
@@ -24,6 +25,8 @@ export interface ContainerProps {
   readonly mode: Mode;
   readonly paddingHorizontal?: number;
   readonly paddingVectical?: number;
+  size?: number;
+  shadow?: boolean;
 }
 
 export interface TitleProps {
