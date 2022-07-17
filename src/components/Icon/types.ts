@@ -1,5 +1,5 @@
 import {ImageProps} from 'react-native';
-import {NameIconTypes} from '../../constants/icons';
+import {NameIconTypes} from '~/constants/icons';
 
 export interface IconOptionsProps {
   icon: NameIconTypes;

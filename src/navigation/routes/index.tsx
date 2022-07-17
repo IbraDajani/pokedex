@@ -9,8 +9,8 @@ const {Navigator, Screen} = createNativeStackNavigator();
 const Routes = () => {
   return (
     <Navigator screenOptions={{headerShown: false}}>
-      <Screen name="Login" component={Login} />
       <Screen name="Home" component={Home} />
+      <Screen name="Login" component={Login} />
       <Screen name="Internal" component={Internal} />
     </Navigator>
   );
