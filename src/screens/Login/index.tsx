@@ -23,7 +23,6 @@ const Login: React.FC = () => {
     try {
       setLoading(true);
       const {user} = await GoogleSignin.signIn();
-      console.log(user);
       setGoogleUser(user);
     } catch (error) {
       console.log(error);
