@@ -50,7 +50,7 @@ const Button = ({
         </AbsoluteIcon>
       )}
       <Title color={colorByMode}>{children}</Title>
-      {!loading && (
+      {loading && (
         <Loading style={{transform: [{rotate: spin}]}} source={pokeball} />
       )}
     </Container>
