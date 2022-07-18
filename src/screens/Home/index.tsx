@@ -1,6 +1,11 @@
 import React from 'react';
 import {FlatList, StatusBar} from 'react-native';
-import {Container, FlatListContainer, BackgroundImg, TextName} from './styles';
+import {
+  Container,
+  FlatListContainer,
+  BackgroundImg,
+  HeaderTitle,
+} from './styles';
 import PokemonCard from './localComponents/PokemonCard';
 import {apiJSON} from '~/utils/apiMockData';
 import Separator from '~/components/Separator';
@@ -17,7 +22,7 @@ const Home: React.FC = () => {
       />
       <BackgroundImg source={pokeBallImage} />
       <HeaderLabel />
-      <TextName>Pokedex</TextName>
+      <HeaderTitle>Pokedex</HeaderTitle>
       <FlatListContainer>
         <FlatList
           data={apiJSON}
