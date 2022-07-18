@@ -11,17 +11,14 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
     if (paddingHorizontal) {
       return css`
         padding-left: ${paddingHorizontal}px;
-
         padding-right: ${paddingHorizontal}px;
       `;
     }
   }}
-
   ${({paddingVectical}) => {
     if (paddingVectical) {
       return css`
         padding-top: ${paddingVectical}px;
-
         padding-bottom: ${paddingVectical}px;
       `;
     }
@@ -30,28 +27,19 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
     if (mode === 'outlined') {
       return 'transparent';
     }
-
     return color;
   }};
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 10px;
-
   flex-direction: row;
-
   border-color: ${({borderColor}) => borderColor || 'transparent'};
-
   border-width: 1px;
 `;
 
 export const Title = styled.Text<TitleProps>`
   color: ${({color}) => color};
-
   font-size: 18px;
-
   align-self: center;
 `;
 

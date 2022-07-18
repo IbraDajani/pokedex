@@ -3,8 +3,8 @@ import Text from '~/components/Text';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: white;
-  justify-content: center;
+  background-color: #f1f1f1;
+  padding: 10px;
 `;
 export const HeaderTitle = styled(Text).attrs({
   size: 30,

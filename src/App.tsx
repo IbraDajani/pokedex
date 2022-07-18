@@ -1,11 +1,11 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import Routes from './navigation/routes';
+import SignedInRoutes from './navigation/SignedInRoutes';
 
 const App: React.FC = () => {
   return (
     <NavigationContainer>
-      <Routes />
+      <SignedInRoutes />
     </NavigationContainer>
   );
 };
