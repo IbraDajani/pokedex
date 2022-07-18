@@ -4,26 +4,26 @@ import Text from '~/components/Text';
 export const Container = styled.View`
   flex: 1;
   background-color: white;
-  padding: 10px;
+  justify-content: center;
 `;
 export const HeaderTitle = styled(Text).attrs({
   size: 30,
-  color: 'black',
+  isBold: true,
 })`
-  width: 160px;
-  padding-left: 20px;
-  position: absolute;
-  top: 140px;
+  margin-left: 20px;
 `;
+
 export const FlatListContainer = styled.View`
-  margin-top: 130px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const BackgroundImage = styled.Image`
   width: 450px;
   height: 450px;
   position: absolute;
-  left: 140px;
-  bottom: 550px;
+  left: 150px;
+  top: -140px;
   opacity: 0.4;
 `;
