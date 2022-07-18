@@ -39,37 +39,37 @@ const PokemonCard = ({item, index, scrollY, numColumns}: Props) => {
   const HIGHT_OF_ITEM = 110;
   const HIGHT_OF_CONTAINER = HIGHT_OF_ITEM + 20;
 
-  const InputCalc = value => {
+  const getColumnCalc = value => {
     return value + HIGHT_OF_CONTAINER * Math.floor(index / numColumns);
   };
 
-  const opacityInputRange = [
-    InputCalc(0),
-    InputCalc(50),
-    InputCalc(80),
-    InputCalc(100),
+  const inputRange = [
+    getColumnCalc(0),
+    getColumnCalc(50),
+    getColumnCalc(80),
+    getColumnCalc(100),
   ];
 
   const scale = scrollY.interpolate({
-    inputRange: opacityInputRange,
+    inputRange,
     outputRange: [1, 0.5, 0.3, 0],
     extrapolate: 'clamp',
   });
 
   const opacity = scrollY.interpolate({
-    inputRange: opacityInputRange,
+    inputRange,
     outputRange: [1, 0.5, 0.3, 0],
     extrapolate: 'clamp',
   });
 
   const rotateX = scrollY.interpolate({
-    inputRange: opacityInputRange,
+    inputRange,
     outputRange: ['0deg', '180deg', '300deg', '360deg'],
     extrapolate: 'clamp',
   });
 
   const translateX = scrollY.interpolate({
-    inputRange: opacityInputRange,
+    inputRange,
     outputRange: [1, 0.5, 0.3, 500],
     extrapolate: 'clamp',
   });
@@ -81,7 +81,7 @@ const PokemonCard = ({item, index, scrollY, numColumns}: Props) => {
     outputRange: ['0deg', '360deg'],
   });
 
-  const startAnimation = () => {
+  const startImageAnimation = () => {
     Animated.loop(
       Animated.timing(spinValue, {
         toValue: 1,
@@ -92,7 +92,7 @@ const PokemonCard = ({item, index, scrollY, numColumns}: Props) => {
     ).start();
   };
 
-  const stopAnimation = () => {
+  const stopImageAnimation = () => {
     Animated.loop(
       Animated.timing(spinValue, {
         toValue: 1,
@@ -104,10 +104,10 @@ const PokemonCard = ({item, index, scrollY, numColumns}: Props) => {
   };
 
   const handleNavigateToInternal2 = async () => {
-    startAnimation();
+    startImageAnimation();
 
     setTimeout(() => {
-      navigate('Internal', {item, stopAnimation, spinValue});
+      navigate('Internal', {item, stopImageAnimation, spinValue});
     }, 1500);
   };
 

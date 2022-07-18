@@ -6,12 +6,13 @@ import {Pressable} from 'react-native';
 import {RoutePokemonDTO} from '~/@types/dtos/pokemonDTO';
 
 const Internal: React.FC = () => {
-  const {item, spinValue, stopAnimation}: RoutePokemonDTO = useRoute().params;
+  const {item, spinValue, stopImageAnimation}: RoutePokemonDTO =
+    useRoute().params;
   const {goBack} = useNavigation();
 
   const resetPropsAnimation = () => {
     setTimeout(() => {
-      stopAnimation();
+      stopImageAnimation();
       spinValue.setValue(0);
     }, 500);
   };
