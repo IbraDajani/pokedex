@@ -3,7 +3,7 @@ import Text from '~/components/Text';
 import {Container} from './styles';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {Pressable} from 'react-native';
-import {RoutePokemonDTO} from '~/@types/dtos/pokemonDTO';
+import {RoutePokemonDTO} from '../../@types/dtos/pokemonDTO';
 
 const Internal: React.FC = () => {
   const {item}: RoutePokemonDTO = useRoute().params;

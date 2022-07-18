@@ -10,6 +10,7 @@ const SignedInRoutes = () => {
     <Navigator screenOptions={{headerShown: false}}>
       <Screen name="Home" component={Home} />
       <Screen name="Internal" component={Internal} />
+      <Screen name="Login" component={Login} />
     </Navigator>
   );
 };
