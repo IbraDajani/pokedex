@@ -17,14 +17,9 @@ const usePokemonCardController = ({item}: RoutePokemonDTO) => {
     return colorByTypes[item.type[0]];
   }, [item]);
 
-  const checkIfItemIsLeft = useMemo(() => {
-    return item?.id % 2 !== 0;
-  }, [item]);
-
   return {
     handleNavigateToInternal,
     getBackgroundColorByType,
-    checkIfItemIsLeft,
   };
 };
 

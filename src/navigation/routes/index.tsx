@@ -10,8 +10,8 @@ const Routes = () => {
   return (
     <Navigator screenOptions={{headerShown: false}}>
       <Screen name="Home" component={Home} />
-      <Screen name="Login" component={Login} />
       <Screen name="Internal" component={Internal} />
+      <Screen name="Login" component={Login} />
     </Navigator>
   );
 };
