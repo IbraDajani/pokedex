@@ -12,6 +12,5 @@ export const Container = styled.View`
 `;
 export const RowBetweenHome = styled(RowBetween).attrs({})`
   padding-top: 55px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding-left: 15px;
 `;

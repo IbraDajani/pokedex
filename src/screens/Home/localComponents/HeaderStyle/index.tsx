@@ -7,11 +7,11 @@ const HeaderStyle = () => {
   return (
     <Container>
       <RowBetweenHome>
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Icon icon="logout" size={30} activeColor="white" />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity>
-          <Icon icon="menu" size={30} activeColor="white" />
+          <Icon icon="menu" size={30} activeColor="black" />
         </TouchableOpacity>
       </RowBetweenHome>
     </Container>

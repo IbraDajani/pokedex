@@ -3,9 +3,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../../screens/Home';
 import Internal from '../../screens/Internal';
 import Login from '../../screens/Login';
-import HeaderStyle from '../../screens/Home/localComponents/HeaderStyle';
-import {BackgroundHeader, BackgroundImg} from '../../screens/Home/styles';
-import pokeBallImage from '~/assets/images/pokeball.png';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 

@@ -18,9 +18,6 @@ const Home: React.FC = () => {
       <BackgroundImg source={pokeBallImage} />
       <HeaderStyle />
       <TextName>Pokedex</TextName>
-      <View>
-        <Text>Mamaco</Text>
-      </View>
       <FlatListContainer>
         <FlatList
           data={apiJSON}
