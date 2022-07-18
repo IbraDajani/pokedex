@@ -107,9 +107,7 @@ const PokemonCard = ({item, index, scrollY, numColumns}: Props) => {
     startAnimation();
 
     setTimeout(() => {
-      navigate('Internal', {item});
-      stopAnimation();
-      return () => spinValue.setValue(0);
+      navigate('Internal', {item, stopAnimation, spinValue});
     }, 1500);
   };
 
