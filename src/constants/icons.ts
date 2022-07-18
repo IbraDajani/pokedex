@@ -4,6 +4,7 @@ import menu from '~/assets/icons/menu/Vector.png';
 import closedEye from '~/assets/icons/closedEye/Vector.png';
 import openedEye from '~/assets/icons/openedEye/Vector.png';
 import logout from '~/assets/icons/logout/Vector.png';
+import google from '../assets/icons/google/Vector.png';
 
 export type NameIconTypes =
   | 'filter'
@@ -11,6 +12,7 @@ export type NameIconTypes =
   | 'menu'
   | 'closedEye'
   | 'openedEye'
-  | 'logout';
+  | 'logout'
+  | 'google';
 
-export default {filter, like, menu, closedEye, openedEye, logout};
+export default {filter, like, menu, closedEye, openedEye, google, logout};
