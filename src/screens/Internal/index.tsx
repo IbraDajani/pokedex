@@ -11,7 +11,6 @@ const Internal: React.FC = () => {
   return (
     <Container>
       <Pressable onPress={goBack}>
-        <Image style={{height: 300, width: 300}} source={{uri: item?.img}} />
         <Text size={20}>{item?.name}</Text>
         <Text>{item?.type?.[0]}</Text>
         <Text>{item?.next_evolution?.[0].name}</Text>

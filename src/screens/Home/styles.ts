@@ -29,5 +29,4 @@ export const BackgroundImg = styled(Image).attrs({
   left: 140px;
   bottom: 550px;
   opacity: 0.4;
-  /* tint-color: white; */
 `;

@@ -1,7 +1,5 @@
-import {Image} from 'react-native';
 import styled from 'styled-components/native';
 import RowBetween from '~/components/RowBetween';
-import Text from '../../../../components/Text';
 
 export const Container = styled.View`
   height: 80px;
@@ -10,7 +8,7 @@ export const Container = styled.View`
   background-color: transparent;
   flex-direction: row;
 `;
-export const RowBetweenHome = styled(RowBetween).attrs({})`
+export const RowBetweenHome = styled(RowBetween)`
   padding-top: 55px;
   padding-left: 15px;
 `;

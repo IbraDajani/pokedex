@@ -13,11 +13,8 @@ import pokeBallImage from '~/assets/images/pokeball.png';
 import usePokemonCardController from './usePokemonCardController';
 
 const PokemonCard = ({item}: Props) => {
-  const {
-    checkIfItemIsLeft,
-    getBackgroundColorByType,
-    handleNavigateToInternal,
-  } = usePokemonCardController({item});
+  const {getBackgroundColorByType, handleNavigateToInternal} =
+    usePokemonCardController({item});
 
   return (
     <Container

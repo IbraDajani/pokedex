@@ -1,10 +1,10 @@
 import React from 'react';
-import {FlatList, StatusBar, View, Text} from 'react-native';
+import {FlatList, StatusBar} from 'react-native';
 import {Container, FlatListContainer, BackgroundImg, TextName} from './styles';
 import PokemonCard from './localComponents/PokemonCard';
 import {apiJSON} from '~/utils/apiMockData';
 import Separator from '~/components/Separator';
-import HeaderStyle from './localComponents/HeaderStyle';
+import HeaderLabel from './localComponents/HeaderLabel';
 import pokeBallImage from '~/assets/images/pokeball.png';
 
 const Home: React.FC = () => {
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         barStyle="dark-content"
       />
       <BackgroundImg source={pokeBallImage} />
-      <HeaderStyle />
+      <HeaderLabel />
       <TextName>Pokedex</TextName>
       <FlatListContainer>
         <FlatList
