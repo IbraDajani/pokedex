@@ -7,4 +7,5 @@ export type Props = {
 export interface ColorProps {
   backgroundColor?: string;
   isLeft?: boolean;
+  style?: string;
 }

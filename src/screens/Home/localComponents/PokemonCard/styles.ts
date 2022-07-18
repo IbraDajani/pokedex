@@ -8,7 +8,7 @@ export const Container = styled.TouchableOpacity<ColorProps>`
   border-radius: 24px;
   padding-top: 10px;
   padding-left: 10px;
-  margin-right: ${({isLeft}) => (isLeft ? 10 : 0)}px;
+  margin: 2px 6px;
   background-color: ${({backgroundColor}) => backgroundColor || 'transparent'};
   position: relative;
   overflow: hidden;

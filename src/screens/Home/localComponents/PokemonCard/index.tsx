@@ -22,7 +22,6 @@ const PokemonCard = ({item}: Props) => {
   return (
     <Container
       onPress={handleNavigateToInternal}
-      isLeft={checkIfItemIsLeft}
       backgroundColor={getBackgroundColorByType}>
       <BackgroundImg source={pokeBallImage} />
       <Img source={{uri: item?.img}} />
