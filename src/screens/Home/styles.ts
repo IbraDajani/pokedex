@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import {Image} from 'react-native';
 import Text from '~/components/Text';
 
 export const Container = styled.View`
@@ -7,7 +6,7 @@ export const Container = styled.View`
   background-color: white;
   padding: 10px;
 `;
-export const TextName = styled(Text).attrs({
+export const HeaderTitle = styled(Text).attrs({
   size: 30,
   color: 'black',
 })`
@@ -20,9 +19,7 @@ export const FlatListContainer = styled.View`
   margin-top: 130px;
 `;
 
-export const BackgroundImg = styled(Image).attrs({
-  resizeMode: 'contain',
-})`
+export const BackgroundImage = styled.Image`
   width: 450px;
   height: 450px;
   position: absolute;

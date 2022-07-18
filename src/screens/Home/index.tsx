@@ -3,7 +3,7 @@ import {FlatList, StatusBar} from 'react-native';
 import {
   Container,
   FlatListContainer,
-  BackgroundImg,
+  BackgroundImage,
   HeaderTitle,
 } from './styles';
 import PokemonCard from './localComponents/PokemonCard';
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      <BackgroundImg source={pokeBallImage} />
+      <BackgroundImage source={pokeBallImage} />
       <HeaderLabel />
       <HeaderTitle>Pokedex</HeaderTitle>
       <FlatListContainer>
