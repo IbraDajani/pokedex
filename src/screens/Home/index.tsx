@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, ImageBackground, StatusBar} from 'react-native';
+import {FlatList, StatusBar} from 'react-native';
 import {
   Container,
   BackgroundImage,
