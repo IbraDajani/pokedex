@@ -1,6 +1,5 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-import {FlatList, StatusBar} from 'react-native';
+import {FlatList, ImageBackground, StatusBar} from 'react-native';
 import {
   Container,
   BackgroundImage,
@@ -10,11 +9,13 @@ import {
 import PokemonCard from './localComponents/PokemonCard';
 import {apiJSON} from '~/utils/apiMockData';
 import Separator from '~/components/Separator';
-import HeaderLabel from './localComponents/HeaderLabel';
+import Header from '~/components/Header';
 import pokeBallImage from '~/assets/images/pokeball.png';
-import RowBetween from '~/components/RowBetween';
+import {useNavigation} from '@react-navigation/native';
+import ButtonHeader from '~/components/ButtonHeader';
 
 const Home: React.FC = () => {
+  const {navigate} = useNavigation();
   return (
     <Container>
       <StatusBar
@@ -22,11 +23,15 @@ const Home: React.FC = () => {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      <RowBetween>
-        <BackgroundImage source={pokeBallImage} />
-        <HeaderLabel />
-      </RowBetween>
-      <Separator height={20} />
+      <Separator height={54} />
+      <BackgroundImage source={pokeBallImage} />
+      <Header>
+        <ButtonHeader
+          onPress={() => navigate('Internal')}
+          icon="menu"
+          color="black"
+        />
+      </Header>
       <HeaderTitle>Pokedex</HeaderTitle>
       <Separator height={50} />
       <FlatListContainer>
@@ -35,7 +40,6 @@ const Home: React.FC = () => {
           renderItem={({item}) => <PokemonCard item={item} />}
           keyExtractor={(item, index) => `${item.id}-${index}-pokemon`}
           numColumns={2}
-          ItemSeparatorComponent={() => <Separator height={8} />}
           showsVerticalScrollIndicator={false}
         />
       </FlatListContainer>
