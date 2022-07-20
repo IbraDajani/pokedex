@@ -16,8 +16,8 @@ import ButtonHeader from '~/components/ButtonHeader';
 
 const Home: React.FC = () => {
   const {navigate} = useNavigation();
-  const handlerNavigateInternal = () => {
-    return navigate('Internal');
+  const handlerNavigateToInternal = () => {
+    navigate('Internal');
   };
   return (
     <Container>
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
       <BackgroundImage source={pokeBallImage} />
       <Header>
         <ButtonHeader
-          onPress={handlerNavigateInternal}
+          onPress={handlerNavigateToInternal}
           icon="menu"
           color="black"
         />
