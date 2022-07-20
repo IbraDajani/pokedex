@@ -22,7 +22,7 @@ export const FlatListContainer = styled.View`
 export const BackgroundImage = styled.Image`
   width: ${RFValue(300)}px;
   height: ${RFValue(300)}px;
-  left: ${RFValue(165)}px;
+  left: ${RFValue(160)}px;
   top: ${RFValue(-90)}px;
   position: absolute;
   opacity: 0.4;

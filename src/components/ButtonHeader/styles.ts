@@ -1,3 +1,3 @@
 import styled from 'styled-components/native';
 
-export const ButtonPress = styled.TouchableOpacity``;
+export const Container = styled.TouchableOpacity``;

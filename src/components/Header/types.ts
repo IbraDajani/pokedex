@@ -1,3 +1,3 @@
 export interface HeaderProps {
-  children?: string | React.ReactNode;
+  children?: React.ReactNode;
 }
