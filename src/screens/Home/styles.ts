@@ -1,29 +1,29 @@
 import styled from 'styled-components/native';
 import Text from '~/components/Text';
+import {RFValue} from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   flex: 1;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 0 ${RFValue(10)}px;
 `;
 export const HeaderTitle = styled(Text).attrs({
-  size: 30,
-  color: 'black',
+  size: RFValue(25),
+  isBold: true,
 })`
-  width: 160px;
-  padding-left: 20px;
-  position: absolute;
-  top: 140px;
+  padding-left: ${RFValue(10)}px;
 `;
+
 export const FlatListContainer = styled.View`
-  margin-top: 130px;
+  align-items: center;
+  padding-bottom: ${RFValue(160)}px;
 `;
 
 export const BackgroundImage = styled.Image`
-  width: 450px;
-  height: 450px;
+  width: ${RFValue(300)}px;
+  height: ${RFValue(300)}px;
+  left: ${RFValue(156)}px;
+  top: ${RFValue(-90)}px;
   position: absolute;
-  left: 140px;
-  bottom: 550px;
   opacity: 0.4;
 `;
