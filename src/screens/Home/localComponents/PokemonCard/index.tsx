@@ -9,7 +9,7 @@ import {
   TextType,
 } from './styles';
 import {Props} from './types';
-import pokeBallImage from '~/assets/images/pokeballBack.png';
+import pokeBallImage from '~/assets/images/pokeball.png';
 import usePokemonCardController from './usePokemonCardController';
 
 const PokemonCard = ({item}: Props) => {

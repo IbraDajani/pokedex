@@ -43,9 +43,10 @@ export const Img = styled.Image`
   top: ${RFValue(28)}px;
 `;
 export const BackgroundImg = styled.ImageBackground`
-  width: ${RFValue(120)}px;
-  height: ${RFValue(120)}px;
+  width: ${RFValue(75)}px;
+  height: ${RFValue(75)}px;
   position: absolute;
-  left: ${RFValue(75)}px;
-  opacity: 0.6;
+  left: ${RFValue(80)}px;
+  top: 40px;
+  opacity: 0.4;
 `;
