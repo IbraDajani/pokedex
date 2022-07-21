@@ -4,7 +4,7 @@ import {ColorProps} from './types';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 export const Container = styled.TouchableOpacity<ColorProps>`
-  width: 185px;
+  width: 48%;
   height: 120px;
   border-radius: 24px;
   padding-top: 10px;
