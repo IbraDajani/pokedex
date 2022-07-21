@@ -4,12 +4,12 @@ import {ColorProps} from './types';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 export const Container = styled.TouchableOpacity<ColorProps>`
-  width: ${RFValue(150)}px;
-  height: ${RFValue(100)}px;
-  border-radius: ${RFValue(20)}px;
-  padding-top: ${RFValue(10)}px;
-  padding-left: ${RFValue(10)}px;
-  margin: ${RFValue(4)}px;
+  width: 185px;
+  height: 120px;
+  border-radius: 24px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin: 4px;
   background-color: ${({backgroundColor}) => backgroundColor || 'transparent'};
   position: relative;
   overflow: hidden;
@@ -27,26 +27,26 @@ export const TextType = styled(Text).attrs({
   isBold: true,
 })`
   background-color: #ffffff60;
-  min-width: ${RFValue(40)}px;
-  max-width: ${RFValue(50)}px;
-  border-radius: ${RFValue(10)}px;
+  min-width: 50px;
+  max-width: 60px;
+  border-radius: 10px;
   text-align: center;
 `;
 
 export const TextDummy = styled.View``;
 
 export const Img = styled.Image`
-  width: ${RFValue(72)}px;
-  height: ${RFValue(72)}px;
+  width: 90px;
+  height: 90px;
   position: absolute;
-  left: ${RFValue(80)}px;
-  top: ${RFValue(28)}px;
+  left: 90px;
+  top: 30px;
 `;
 export const BackgroundImg = styled.ImageBackground`
-  width: ${RFValue(75)}px;
-  height: ${RFValue(75)}px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  left: ${RFValue(80)}px;
-  top: 40px;
-  opacity: 0.4;
+  left: 90px;
+  top: 30px;
+  opacity: 0.3;
 `;

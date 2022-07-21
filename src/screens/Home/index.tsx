@@ -35,8 +35,9 @@ const Home: React.FC = () => {
           color="black"
         />
       </Header>
+      <Separator height={40} />
       <HeaderTitle>Pokedex</HeaderTitle>
-      <Separator height={50} />
+      <Separator height={30} />
       <FlatListContainer>
         <FlatList
           data={apiJSON}
