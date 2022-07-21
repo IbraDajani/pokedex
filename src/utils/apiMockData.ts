@@ -561,7 +561,7 @@ export const apiJSON = [
     id: 21,
     num: '021',
     name: 'Spearow',
-    img: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png',
+    img: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png',
     type: ['Normal', 'Flying'],
     height: '0.30 m',
     weight: '2.0 kg',
