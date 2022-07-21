@@ -11,7 +11,6 @@ import {apiJSON} from '~/utils/apiMockData';
 import Separator from '~/components/Separator';
 import Header from '~/components/Header';
 import pokeBallImage from '~/assets/images/pokeball.png';
-import {useNavigation} from '@react-navigation/native';
 import ButtonHeader from '~/components/ButtonHeader';
 import useAuth from '~/hooks/useAuth';
 import Loading from '~/components/Loading';
@@ -22,12 +21,6 @@ const Home: React.FC = () => {
    */
 
   const {googleUser, handleGoogleSignOut, loading} = useAuth();
-
-  const {navigate} = useNavigation();
-
-  const handlerNavigateToInternal = () => {
-    navigate('Internal');
-  };
 
   return (
     <Container>
