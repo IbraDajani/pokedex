@@ -5,25 +5,25 @@ import {RFValue} from 'react-native-responsive-fontsize';
 export const Container = styled.View`
   flex: 1;
   background-color: #f1f1f1;
-  padding: 0 ${RFValue(10)}px;
+  padding: 0 10px;
 `;
 export const HeaderTitle = styled(Text).attrs({
   size: RFValue(25),
   isBold: true,
 })`
-  padding-left: ${RFValue(10)}px;
+  margin: 0 6px;
 `;
 
 export const FlatListContainer = styled.View`
   align-items: center;
-  padding-bottom: ${RFValue(160)}px;
+  padding-bottom: 200px;
 `;
 
 export const BackgroundImage = styled.Image`
-  width: ${RFValue(300)}px;
-  height: ${RFValue(300)}px;
-  left: ${RFValue(156)}px;
-  top: ${RFValue(-90)}px;
+  width: 285px;
+  height: 285px;
+  left: 235px;
+  top: -75px;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.1;
 `;

@@ -42,8 +42,9 @@ const Home: React.FC = () => {
           />
         )}
       </Header>
-      <HeaderTitle>{googleUser?.givenName}' s Pokedex</HeaderTitle>
-      <Separator height={50} />
+      <Separator height={40} />
+      <HeaderTitle>Pokedex</HeaderTitle>
+      <Separator height={30} />
       <FlatListContainer>
         <FlatList
           data={apiJSON}
