@@ -13,12 +13,22 @@ import Header from '~/components/Header';
 import pokeBallImage from '~/assets/images/pokeball.png';
 import {useNavigation} from '@react-navigation/native';
 import ButtonHeader from '~/components/ButtonHeader';
+import useAuth from '~/hooks/useAuth';
+import Loading from '~/components/Loading';
 
 const Home: React.FC = () => {
+  /**
+   * Hooks
+   */
+
+  const {googleUser, handleGoogleSignOut, loading} = useAuth();
+
   const {navigate} = useNavigation();
+
   const handlerNavigateToInternal = () => {
     navigate('Internal');
   };
+
   return (
     <Container>
       <StatusBar
@@ -29,13 +39,17 @@ const Home: React.FC = () => {
       <Separator height={54} />
       <BackgroundImage source={pokeBallImage} />
       <Header>
-        <ButtonHeader
-          onPress={handlerNavigateToInternal}
-          icon="menu"
-          color="black"
-        />
+        {loading ? (
+          <Loading />
+        ) : (
+          <ButtonHeader
+            onPress={handleGoogleSignOut}
+            icon="menu"
+            color="black"
+          />
+        )}
       </Header>
-      <HeaderTitle>Pokedex</HeaderTitle>
+      <HeaderTitle>{googleUser?.givenName}' s Pokedex</HeaderTitle>
       <Separator height={50} />
       <FlatListContainer>
         <FlatList

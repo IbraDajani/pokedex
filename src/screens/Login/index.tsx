@@ -1,54 +1,25 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, {useCallback, useEffect, useState} from 'react';
+import React from 'react';
 import {StatusBar} from 'react-native';
 import {Container, HeaderImageLogo, HeaderLogo} from './styles';
 import Text from '../../components/Text';
 import Separator from '../../components/Separator';
 import Button from '../../components/Button';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import {GoogleUser} from './types';
+import useAuth from '~/hooks/useAuth';
 
 const Login: React.FC = () => {
   /**
-   * States
+   * Hooks
    */
 
-  const [googleUser, setGoogleUser] = useState<GoogleUser>({} as GoogleUser);
-  const [loading, setLoading] = useState<boolean>(false);
-
-  /**
-   * Callbacks
-   */
-
-  const handleGoogleSignIn = useCallback(async () => {
-    try {
-      setLoading(true);
-      const {user} = await GoogleSignin.signIn();
-      setGoogleUser(user);
-      console.log(user);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  /**
-   * Effects
-   */
-
-  useEffect(() => {
-    GoogleSignin.configure({
-      offlineAccess: true,
-      scopes: ['profile', 'email'],
-      webClientId:
-        '224819431993-mgcka63re3b5juit5js2gslrlrgi0qvc.apps.googleusercontent.com',
-    });
-  }, []);
+  const {handleGoogleSignIn, loading} = useAuth();
 
   return (
     <Container>
-      <StatusBar translucent backgroundColor="transparent" />
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="dark-content"
+      />
       <HeaderImageLogo source={require('../../assets/images/headerLogo.gif')} />
       <Separator height={50} />
       <HeaderLogo>
