@@ -4,5 +4,5 @@ export const Container = styled.View`
   width: 100%;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 0 14px;
+  padding: 0 10px;
 `;

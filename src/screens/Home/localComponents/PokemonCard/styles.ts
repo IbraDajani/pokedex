@@ -48,5 +48,5 @@ export const BackgroundImg = styled.ImageBackground`
   position: absolute;
   left: 90px;
   top: 30px;
-  opacity: 0.3;
+  opacity: 0.15;
 `;

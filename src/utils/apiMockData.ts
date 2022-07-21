@@ -3,7 +3,7 @@ export const colorByTypes = {
   Water: '#76bdfe',
   Grass: '#48d0b0',
   Electric: '#ffd86f',
-  Ice: 'cyan',
+  Ice: '#1abab5',
   Fighting: 'orange',
   Poison: 'purple',
   Ground: '#fdad5c',

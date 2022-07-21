@@ -5,7 +5,7 @@ import Icon from '../Icon';
 const ButtonHeader = ({icon, onPress, color, ...rest}: ButtonHeaderProps) => {
   return (
     <Container onPress={onPress} {...rest}>
-      {!!icon && <Icon icon={icon} size={32} activeColor={color} />}
+      {!!icon && <Icon icon={icon} size={28} activeColor={color} />}
     </Container>
   );
 };

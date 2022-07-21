@@ -20,10 +20,10 @@ export const FlatListContainer = styled.View`
 `;
 
 export const BackgroundImage = styled.Image`
-  width: 300px;
-  height: 300px;
-  left: 220px;
-  top: -80px;
+  width: 285px;
+  height: 285px;
+  left: 235px;
+  top: -75px;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.1;
 `;
