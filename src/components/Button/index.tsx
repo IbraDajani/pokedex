@@ -1,9 +1,9 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 import {ButtonProps} from './types';
 import {AbsoluteIcon, Container, Loading, Title} from './styles';
 import Icon from '../Icon';
 import pokeball from '../../assets/images/pokeball.png';
-import {Animated, Easing} from 'react-native';
+import useButtonController from './useButtonController';
 const Button = ({
   onPress,
   children,
@@ -15,25 +15,7 @@ const Button = ({
 
   ...rest
 }: ButtonProps) => {
-  const colorByMode = useMemo(() => {
-    return mode === 'outlined' ? color : 'white';
-  }, [mode, color]);
-
-  const spinValue = new Animated.Value(0);
-
-  const spin = spinValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-  });
-
-  Animated.loop(
-    Animated.timing(spinValue, {
-      toValue: 1,
-      duration: 1000,
-      easing: Easing.linear,
-      useNativeDriver: true,
-    }),
-  ).start();
+  const {colorByMode, spin} = useButtonController(mode, color);
 
   return (
     <Container
