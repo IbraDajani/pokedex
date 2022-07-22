@@ -1,9 +1,9 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../../screens/Home';
 import Internal from '../../screens/Internal';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
-const {Navigator, Screen} = createNativeStackNavigator();
+const {Navigator, Screen} = createDrawerNavigator();
 
 const SignedInRoutes = () => {
   return (
