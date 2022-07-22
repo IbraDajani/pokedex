@@ -14,6 +14,7 @@ import pokeBallImage from '~/assets/images/pokeball.png';
 import ButtonHeader from '~/components/ButtonHeader';
 import useAuth from '~/hooks/useAuth';
 import Loading from '~/components/Loading';
+import {DrawerActions, useNavigation} from '@react-navigation/native';
 
 const Home: React.FC = () => {
   /**
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
    */
 
   const {googleUser, handleGoogleSignOut, loading} = useAuth();
+  const navigation = useNavigation();
 
   return (
     <Container>
@@ -36,7 +38,7 @@ const Home: React.FC = () => {
           <Loading />
         ) : (
           <ButtonHeader
-            onPress={handleGoogleSignOut}
+            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
             icon="menu"
             color="black"
           />

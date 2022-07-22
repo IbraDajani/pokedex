@@ -1,7 +1,7 @@
 import React from 'react';
 import useAuth from '~/hooks/useAuth';
-import SignedInRoutes from './SignedInRoutes';
-import SignInRoutes from './SignInRoutes';
+import SignedInRoutes from './StackNavigatorRoutes/SignedInRoutes';
+import SignInRoutes from './StackNavigatorRoutes/SignInRoutes';
 
 const Routes = () => {
   const {googleUser} = useAuth();
