@@ -1,11 +1,4 @@
-import React, {
-  forwardRef,
-  useCallback,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, {forwardRef, useCallback} from 'react';
 import {TouchableOpacity} from 'react-native';
 import Icon from '../Icon';
 import Separator from '../Separator';
@@ -19,6 +12,7 @@ import {
   InputInternal,
 } from './styles';
 import {InputProps, InputValueRef} from './types';
+import useInputController from './useInputController';
 
 const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
   {
@@ -34,48 +28,14 @@ const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
   },
   ref,
 ) => {
-  /**
-   * States
-   */
-
-  const [text, setText] = useState<string>('');
-  const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
-
-  /**
-   * Refs
-   */
-
-  const internalRef = useRef<any>();
-
-  /**
-   * ImperativeHandles
-   */
-
-  useImperativeHandle(
-    ref,
-    () => ({
-      value: text,
-      focus: () => internalRef.current?.focus?.(),
-      blur: () => internalRef.current?.blur?.(),
-      setValue: (value: string) => setText(value),
-    }),
-    [text],
-  );
-
-  /**
-   * Memos
-   */
-
-  const selectedColorForActiveColorIcon = useMemo(() => {
-    if (error) {
-      return '#D93936';
-    }
-    if (iconColor) {
-      return iconColor;
-    }
-    return color;
-  }, [color, error, iconColor]);
-
+  const {
+    setPasswordVisible,
+    selectedColorForActiveColorIcon,
+    passwordVisible,
+    internalRef,
+    text,
+    setText,
+  } = useInputController(ref, error, iconColor, color);
   /**
    * Callbacks
    */
@@ -84,7 +44,7 @@ const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
     if (secureTextEntry) {
       return (
         <TouchableOpacity
-          onPress={() => setPasswordVisible(oldState => !oldState)}>
+          onPress={() => setPasswordVisible((oldState: boolean) => !oldState)}>
           <IconContainer iconPosition={iconPosition}>
             <Icon
               activeColor={selectedColorForActiveColorIcon}
@@ -103,11 +63,12 @@ const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
     }
     return null;
   }, [
-    passwordVisible,
     secureTextEntry,
-    selectedColorForActiveColorIcon,
-    iconPosition,
     icon,
+    iconPosition,
+    selectedColorForActiveColorIcon,
+    passwordVisible,
+    setPasswordVisible,
   ]);
 
   return (
@@ -123,7 +84,7 @@ const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
         <InputInternal
           ref={internalRef}
           value={text}
-          onChangeText={value => {
+          onChangeText={(value: string) => {
             setText(value);
             onChangeText?.(value);
           }}

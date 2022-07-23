@@ -20,7 +20,7 @@ const Home: React.FC = () => {
    * Hooks
    */
 
-  const {googleUser, handleGoogleSignOut, loading} = useAuth();
+  const {handleGoogleSignOut, loading} = useAuth();
 
   return (
     <Container>
