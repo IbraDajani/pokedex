@@ -5,28 +5,33 @@ import {
   Container,
   Img,
   TextDummy,
-  TextName,
-  TextType,
+  PokemonName,
+  PokemonType,
 } from './styles';
 import {Props} from './types';
 import pokeBallImage from '~/assets/images/pokeball.png';
 import usePokemonCardController from './usePokemonCardController';
+import useColorByType from '~/hooks/useColorByType';
 
 const PokemonCard = ({item}: Props) => {
-  const {getBackgroundColorByType, handleNavigateToInternal} =
-    usePokemonCardController({item});
+  const {handleNavigateToInternal} = usePokemonCardController({item});
+  const {getBackgroundColorByType} = useColorByType({item});
 
   return (
     <Container
-      onPress={handleNavigateToInternal}
+      onPress={() => handleNavigateToInternal(item)}
       backgroundColor={getBackgroundColorByType}>
       <BackgroundImg source={pokeBallImage} />
       <Img source={{uri: item?.img}} />
-      <TextName>{item?.name}</TextName>
+      <PokemonName>{item?.name}</PokemonName>
       <Separator height={10} />
-      <TextType>{item?.type?.[0]}</TextType>
+      <PokemonType>{item?.type?.[0]}</PokemonType>
       <Separator height={5} />
-      {item?.type?.[1] ? <TextType>{item?.type?.[1]}</TextType> : <TextDummy />}
+      {item?.type?.[1] ? (
+        <PokemonType>{item?.type?.[1]}</PokemonType>
+      ) : (
+        <TextDummy />
+      )}
     </Container>
   );
 };
