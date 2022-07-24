@@ -14,7 +14,7 @@ import pokeBallImage from '~/assets/images/pokeball.png';
 import ButtonHeader from '~/components/ButtonHeader';
 import useAuth from '~/hooks/useAuth';
 import Loading from '~/components/Loading';
-import {DrawerActions, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const Home: React.FC = () => {
   /**
@@ -34,15 +34,11 @@ const Home: React.FC = () => {
       <Separator height={54} />
       <BackgroundImage source={pokeBallImage} />
       <Header>
-        {loading ? (
-          <Loading />
-        ) : (
-          <ButtonHeader
-            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
-            icon="menu"
-            color="black"
-          />
-        )}
+        <ButtonHeader
+          onPress={() => navigation.toggleDrawer()}
+          icon="menu"
+          color="black"
+        />
       </Header>
       <Separator height={40} />
       <HeaderTitle>Pokedex</HeaderTitle>

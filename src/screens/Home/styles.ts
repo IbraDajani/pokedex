@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import Text from '~/components/Text';
 import {RFValue} from 'react-native-responsive-fontsize';
+import {Image} from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
@@ -19,7 +20,7 @@ export const FlatListContainer = styled.View`
   padding-bottom: 200px;
 `;
 
-export const BackgroundImage = styled.Image`
+export const BackgroundImage = styled(Image)`
   width: 285px;
   height: 285px;
   left: 235px;

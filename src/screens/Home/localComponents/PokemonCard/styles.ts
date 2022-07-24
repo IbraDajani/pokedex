@@ -15,13 +15,13 @@ export const Container = styled.TouchableOpacity<ColorProps>`
   overflow: hidden;
 `;
 
-export const TextName = styled(Text).attrs({
+export const PokemonName = styled(Text).attrs({
   size: RFValue(14),
   color: 'white',
   isBold: true,
 })``;
 
-export const TextType = styled(Text).attrs({
+export const PokemonType = styled(Text).attrs({
   size: RFValue(10),
   color: 'white',
   isBold: true,
