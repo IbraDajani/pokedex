@@ -12,16 +12,9 @@ import Separator from '~/components/Separator';
 import Header from '~/components/Header';
 import pokeBallImage from '~/assets/images/pokeball.png';
 import ButtonHeader from '~/components/ButtonHeader';
-import useAuth from '~/hooks/useAuth';
-import Loading from '~/components/Loading';
 import {useNavigation} from '@react-navigation/native';
 
 const Home: React.FC = () => {
-  /**
-   * Hooks
-   */
-
-  const {googleUser, handleGoogleSignOut, loading} = useAuth();
   const navigation = useNavigation();
 
   return (

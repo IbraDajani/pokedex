@@ -8,7 +8,6 @@ import google from '../assets/icons/google/Vector.png';
 import home from '../assets/icons/home/Vector.png';
 import settings from '../assets/icons/settings/Vector.png';
 import darkmode from '../assets/icons/darkmode/Vector.png';
-import lightmode from '../assets/icons/lightmode/Vector.png';
 import favorite from '../assets/icons/favorite/Vector.png';
 
 export type NameIconTypes =
@@ -21,7 +20,6 @@ export type NameIconTypes =
   | 'google'
   | 'home'
   | 'darkmode'
-  | 'lightmode'
   | 'favorite';
 
 export default {
@@ -35,6 +33,5 @@ export default {
   home,
   settings,
   darkmode,
-  lightmode,
   favorite,
 };

@@ -8,7 +8,6 @@ const RouteNavigationButton = ({
   routeName,
   icon,
   setCurrentTab,
-  currentTab,
   children,
   ...rest
 }: Props) => {

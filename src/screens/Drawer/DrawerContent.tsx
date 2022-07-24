@@ -78,33 +78,3 @@ const DrawerContent = () => {
 };
 
 export default DrawerContent;
-
-// const TabButton = (currentTab, setCurrentTab, title, icon) => {
-//   return (
-//     <ButtonContainer
-//       style={{
-//         backgroundColor: currentTab == title ? 'black' : 'transparent',
-//       }}>
-//       <Icon
-//         icon={icon}
-//         activeColor={currentTab == title ? 'white' : 'black'}
-//       />
-//       <Separator width={10} />
-//       <Text
-//         size={15}
-//         isBold={true}
-//         color={currentTab == title ? 'white' : 'black'}>
-//         {title}
-//       </Text>
-//     </ButtonContainer>
-//   );
-//   {
-//     TabButton(currentTab, setCurrentTab, 'Home', 'home');
-//   }
-//   {
-//     TabButton(currentTab, setCurrentTab, 'Favorites', 'like');
-//   }
-//   {
-//     TabButton(currentTab, setCurrentTab, 'Settings', 'settings');
-//   }
-// };

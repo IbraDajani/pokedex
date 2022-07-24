@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacityProps} from 'react-native';
 import {NameIconTypes} from '~/constants/icons';
 
-export type RouteName = 'Home' | 'Favorites';
+export type RouteName = 'Home' | 'Favorites' | 'Dark Mode';
 
 export interface Props extends TouchableOpacityProps {
   routeName: RouteName;
