@@ -16,7 +16,6 @@ import {useNavigation} from '@react-navigation/native';
 
 const Home: React.FC = () => {
   const navigation = useNavigation();
-
   return (
     <Container>
       <StatusBar
