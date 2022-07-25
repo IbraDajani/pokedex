@@ -13,11 +13,6 @@ export const ContainerConfig = styled.View`
   height: 45%;
 `;
 
-export const Header = styled.View`
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-`;
 export const PokemonName = styled(Text).attrs({
   size: RFValue(40),
   color: 'white',
@@ -36,9 +31,6 @@ export const PokemonType = styled(Text).attrs({
   border-radius: 20px;
   text-align: center;
   opacity: 0.8;
-`;
-export const PokemonDetailsContainer = styled.View`
-  width: 100%;
 `;
 
 export const PokemonBoxImage = styled.View`
@@ -70,7 +62,6 @@ export const StatsBox = styled.View`
   border-top-right-radius: 30px;
   padding: 30px;
 `;
-export const OptionButton = styled.Pressable``;
 
 export const DetailOptionButtonBackground = styled.View`
   height: 1px;

@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Text from '~/components/Text';
 
 export const Container = styled.View`
   flex: 1;
@@ -23,5 +24,6 @@ export const PokemonStatBar = styled.View`
   position: static;
   top: 8px;
 `;
-
-export interface PropsStats {}
+export const PokemonTextStyle = styled(Text).attrs({
+  color: '#5c6a70',
+})``;

@@ -6,21 +6,22 @@ import {
   PokemonBoxStats,
   PokemonStatsInfo,
   PokemonStatsInfoResults,
+  PokemonTextStyle,
 } from './styles';
 
 const About = ({item}: RoutePokemonDTO) => {
   return (
     <PokemonBoxStats>
       <PokemonStatsInfo>
-        <Text color="#5c6a70">Species</Text>
-        <Text color="#5c6a70">Height</Text>
-        <Text color="#5c6a70">Weight</Text>
-        <Text color="#5c6a70">Abilities</Text>
+        <PokemonTextStyle>Species</PokemonTextStyle>
+        <PokemonTextStyle>Height</PokemonTextStyle>
+        <PokemonTextStyle>Weight</PokemonTextStyle>
+        <PokemonTextStyle>Abilities</PokemonTextStyle>
         <Separator />
         <Text isBold>Breeding</Text>
-        <Text color="#5c6a70">Gender</Text>
-        <Text color="#5c6a70">Egg Groups</Text>
-        <Text color="#5c6a70">Egg Cycle</Text>
+        <PokemonTextStyle>Gender</PokemonTextStyle>
+        <PokemonTextStyle>Egg Groups</PokemonTextStyle>
+        <PokemonTextStyle>Egg Cycle</PokemonTextStyle>
       </PokemonStatsInfo>
       <PokemonStatsInfoResults>
         <Text isBold>{item?.type[0]}</Text>

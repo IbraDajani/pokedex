@@ -1,24 +1,24 @@
 import React from 'react';
-import {RoutePokemonDTO} from '~/@types/dtos/pokemonDTO';
 import Text from '~/components/Text';
 import {
   PokemonBoxStats,
   PokemonStatsInfo,
   PokemonStatsInfoResults,
   PokemonStatBar,
+  PokemonTextStyle,
 } from './styles';
 
-const BaseStats = ({item}: RoutePokemonDTO) => {
+const BaseStats = () => {
   return (
     <PokemonBoxStats>
       <PokemonStatsInfo>
-        <Text color="#5c6a70">HP</Text>
-        <Text color="#5c6a70">Attack</Text>
-        <Text color="#5c6a70">Defense</Text>
-        <Text color="#5c6a70">Sp.Atk</Text>
-        <Text color="#5c6a70">Sp.Def</Text>
-        <Text color="#5c6a70">Speed</Text>
-        <Text color="#5c6a70">Total</Text>
+        <PokemonTextStyle>HP</PokemonTextStyle>
+        <PokemonTextStyle>Attack</PokemonTextStyle>
+        <PokemonTextStyle>Defense</PokemonTextStyle>
+        <PokemonTextStyle>Sp.Atk</PokemonTextStyle>
+        <PokemonTextStyle>Sp.Def</PokemonTextStyle>
+        <PokemonTextStyle>Speed</PokemonTextStyle>
+        <PokemonTextStyle>Total</PokemonTextStyle>
       </PokemonStatsInfo>
       <PokemonStatsInfoResults>
         <Text>20</Text>

@@ -9,8 +9,6 @@ import Text from '~/components/Text';
 import useColorByType from '~/hooks/useColorByType';
 import {
   Container,
-  Header,
-  PokemonDetailsContainer,
   PokemonBoxImage,
   PokemonName,
   PokemonType,
@@ -18,7 +16,6 @@ import {
   PokemonBackgroundImage,
   StatsBox,
   ContainerConfig,
-  OptionButton,
   DetailOptionButton,
   DetailOptionButtonBackground,
 } from './styles';
@@ -44,17 +41,17 @@ const Internal = ({route}: any) => {
         barStyle="dark-content"
       />
       <ContainerConfig>
-        <Header>
+        <RowBetween>
           <Pressable onPress={goBack}>
             <Icon icon="arrowLeft" activeColor="white" />
           </Pressable>
           <Pressable onPress={() => setlikeOption(!likeOption)}>
             <Icon icon={likeOption ? 'like' : 'redLike'} />
           </Pressable>
-        </Header>
+        </RowBetween>
         <Separator height={20} />
         <RowBetween>
-          <PokemonDetailsContainer>
+          <View>
             <PokemonName>{item?.name}</PokemonName>
             <RowBetween>
               <Text />
@@ -68,7 +65,7 @@ const Internal = ({route}: any) => {
               <Separator width={10} />
               {item?.type?.[1] && <PokemonType>{item?.type?.[1]}</PokemonType>}
             </Row>
-          </PokemonDetailsContainer>
+          </View>
         </RowBetween>
         <Separator height={20} />
         <PokemonBoxImage>
@@ -84,7 +81,7 @@ const Internal = ({route}: any) => {
           {PokemonStats.map(item => {
             return (
               <View key={item.id}>
-                <OptionButton
+                <Pressable
                   isActive={selectedOption === item.id}
                   onPress={() => setSelectedOption(item.id)}>
                   <Text
@@ -93,7 +90,7 @@ const Internal = ({route}: any) => {
                     {item.label}
                   </Text>
                   <Separator height={20} />
-                </OptionButton>
+                </Pressable>
                 {selectedOption === item.id ? <DetailOptionButton /> : null}
               </View>
             );
