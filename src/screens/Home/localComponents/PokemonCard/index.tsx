@@ -4,9 +4,9 @@ import {
   BackgroundImg,
   Container,
   Img,
+  PokemonName,
+  PokemonType,
   TextDummy,
-  TextName,
-  TextType,
 } from './styles';
 import {Props} from './types';
 import pokeBallImage from '~/assets/images/pokeball.png';
@@ -22,11 +22,15 @@ const PokemonCard = ({item}: Props) => {
       backgroundColor={getBackgroundColorByType}>
       <BackgroundImg source={pokeBallImage} />
       <Img source={{uri: item?.img}} />
-      <TextName>{item?.name}</TextName>
+      <PokemonName>{item?.name}</PokemonName>
       <Separator height={10} />
-      <TextType>{item?.type?.[0]}</TextType>
+      <PokemonType>{item?.type?.[0]}</PokemonType>
       <Separator height={5} />
-      {item?.type?.[1] ? <TextType>{item?.type?.[1]}</TextType> : <TextDummy />}
+      {item?.type?.[1] ? (
+        <PokemonType>{item?.type?.[1]}</PokemonType>
+      ) : (
+        <TextDummy />
+      )}
     </Container>
   );
 };

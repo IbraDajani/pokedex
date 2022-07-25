@@ -12,16 +12,10 @@ import Separator from '~/components/Separator';
 import Header from '~/components/Header';
 import pokeBallImage from '~/assets/images/pokeball.png';
 import ButtonHeader from '~/components/ButtonHeader';
-import useAuth from '~/hooks/useAuth';
-import Loading from '~/components/Loading';
+import useHomeController from './useHomeController';
 
 const Home: React.FC = () => {
-  /**
-   * Hooks
-   */
-
-  const {handleGoogleSignOut, loading} = useAuth();
-
+  const {openDrawer} = useHomeController();
   return (
     <Container>
       <StatusBar
@@ -32,15 +26,7 @@ const Home: React.FC = () => {
       <Separator height={54} />
       <BackgroundImage source={pokeBallImage} />
       <Header>
-        {loading ? (
-          <Loading />
-        ) : (
-          <ButtonHeader
-            onPress={handleGoogleSignOut}
-            icon="menu"
-            color="black"
-          />
-        )}
+        <ButtonHeader onPress={openDrawer} icon="menu" color="black" />
       </Header>
       <Separator height={40} />
       <HeaderTitle>Pokedex</HeaderTitle>
