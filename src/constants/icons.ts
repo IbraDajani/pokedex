@@ -6,6 +6,7 @@ import openedEye from '~/assets/icons/openedEye/Vector.png';
 import logout from '~/assets/icons/logout/Vector.png';
 import google from '~/assets/icons/google/Vector.png';
 import arrowLeft from '~/assets/icons/arrowLeft/Vector.png';
+import redLike from '~/assets/icons/redLike/Vector.png';
 
 export type NameIconTypes =
   | 'filter'
@@ -15,7 +16,8 @@ export type NameIconTypes =
   | 'openedEye'
   | 'logout'
   | 'google'
-  | 'arrowLeft';
+  | 'arrowLeft'
+  | 'redLike';
 
 export default {
   filter,
@@ -26,4 +28,5 @@ export default {
   google,
   logout,
   arrowLeft,
+  redLike,
 };
