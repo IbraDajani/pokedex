@@ -6,7 +6,7 @@ import SignInRoutes from './SignInRoutes';
 const Routes = () => {
   const {googleUser} = useAuth();
 
-  return googleUser !== undefined ? <SignedInRoutes /> : <SignInRoutes />;
+  return googleUser === undefined ? <SignedInRoutes /> : <SignInRoutes />;
 };
 
 export default Routes;
