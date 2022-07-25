@@ -1,5 +1,14 @@
 import React, {useState} from 'react';
-import {ActivityIndicator, View} from 'react-native';
+import {View} from 'react-native';
+import {RouteName} from './localComponents/RouteNavigationButton/types';
+import useButtonDrawerController from './useDrawerContentController';
+import pokeBallImage from '~/assets/images/pokeball.png';
+import Separator from '~/components/Separator';
+import Icon from '~/components/Icon';
+import Text from '~/components/Text';
+import RouteNavigationButton from './localComponents/RouteNavigationButton';
+import useAuth from '~/hooks/useAuth';
+
 import {
   AvatarProfile,
   BackgroundImage,
@@ -7,25 +16,23 @@ import {
   ButtonLogout,
   ButtonLogoutText,
   Container,
+  Loading,
   ProfileContainer,
 } from './styles';
-import pokeBallImage from '~/assets/images/pokeball.png';
-import useAuth from '~/hooks/useAuth';
-import Separator from '~/components/Separator';
-import Icon from '~/components/Icon';
-import {useNavigation} from '@react-navigation/native';
-import Text from '~/components/Text';
-import {RouteName} from './localComponents/RouteNavigationButton/types';
-import RouteNavigationButton from './localComponents/RouteNavigationButton';
-
 const DrawerContent = () => {
+  /**
+   * Hooks
+   */
   const {googleUser, handleGoogleSignOut, loading} = useAuth();
-  const {navigate} = useNavigation();
+  const {handleNavigateToHome, handleNavigateToFavorites, spin} =
+    useButtonDrawerController();
+  /**
+   * State
+   */
   const [currentTab, setCurrentTab] = useState<RouteName>('Favorites');
 
   return (
     <Container>
-      <BackgroundImage source={pokeBallImage} />
       <ProfileContainer>
         <Separator height={30} />
         <AvatarProfile />
@@ -36,41 +43,35 @@ const DrawerContent = () => {
         <Text size={16} isBold>
           {googleUser?.familyName}
         </Text>
-        {/* <TouchableOpacity
-          onPress={() => Linking.openURL('https://hotmail.com')}>
-          <Text size={10}>{googleUser?.email}</Text>
-        </TouchableOpacity> */}
       </ProfileContainer>
       <ButtonContainer>
         <RouteNavigationButton
-          onPress={() => navigate('Home')}
+          onPress={handleNavigateToHome}
           icon="home"
           routeName="Home"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
         />
         <RouteNavigationButton
-          onPress={() => navigate('Favorites')}
+          onPress={handleNavigateToFavorites}
           icon="favorite"
           routeName="Favorites"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
         />
-        <RouteNavigationButton
-          onPress={() => {}}
-          icon="darkmode"
-          routeName="Dark Mode"
-        />
       </ButtonContainer>
       <View>
         <ButtonLogout onPress={handleGoogleSignOut}>
           {loading ? (
-            <ActivityIndicator color="red" />
+            <Loading
+              style={{transform: [{rotate: spin}]}}
+              source={pokeBallImage}
+            />
           ) : (
-            <Icon icon="logout" size={24} activeColor="red" />
+            <Icon icon="logout" size={24} />
           )}
           <Separator width={10} />
-          <ButtonLogoutText color="red">Logout</ButtonLogoutText>
+          <ButtonLogoutText>Logout</ButtonLogoutText>
         </ButtonLogout>
       </View>
     </Container>

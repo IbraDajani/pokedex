@@ -1,10 +1,10 @@
+import {Animated} from 'react-native';
 import styled from 'styled-components/native';
 import Avatar from '~/components/Avatar';
 import Text from '~/components/Text';
 
 export const Container = styled.View`
   flex: 1;
-  flex-direction: column;
   align-items: center;
   background-color: #f1f1f1;
   justify-content: space-between;
@@ -18,8 +18,6 @@ export const AvatarProfile = styled(Avatar)``;
 export const ButtonContainer = styled.View`
   flex-direction: column;
   margin-bottom: 170px;
-  /* background-color: gray; */
-  /* border-radius: 24px; */
 `;
 export const BackgroundImage = styled.ImageBackground`
   width: 285px;
@@ -34,10 +32,16 @@ export const ButtonLogout = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   padding: 8px;
-  /* padding-left: 15px; */
   padding-bottom: 30px;
 `;
 export const ButtonLogoutText = styled(Text).attrs({
   size: 14,
   isBold: true,
 })``;
+export const Loading = styled(Animated.Image)`
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  /* position: absolute;
+  right: 20px; */
+`;

@@ -12,10 +12,10 @@ import Separator from '~/components/Separator';
 import Header from '~/components/Header';
 import pokeBallImage from '~/assets/images/pokeball.png';
 import ButtonHeader from '~/components/ButtonHeader';
-import {useNavigation} from '@react-navigation/native';
+import useHomeController from './useHomeController';
 
 const Home: React.FC = () => {
-  const navigation = useNavigation();
+  const {openDrawer} = useHomeController();
   return (
     <Container>
       <StatusBar
@@ -26,11 +26,7 @@ const Home: React.FC = () => {
       <Separator height={54} />
       <BackgroundImage source={pokeBallImage} />
       <Header>
-        <ButtonHeader
-          onPress={() => navigation.toggleDrawer()}
-          icon="menu"
-          color="black"
-        />
+        <ButtonHeader onPress={openDrawer} icon="menu" color="black" />
       </Header>
       <Separator height={40} />
       <HeaderTitle>Pokedex</HeaderTitle>

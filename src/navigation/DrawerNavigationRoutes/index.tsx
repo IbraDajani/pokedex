@@ -4,22 +4,16 @@ import Home from '~/screens/Home';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Favorites from '~/screens/Favorites';
 import DrawerContent from '~/screens/Drawer/DrawerContent';
+import useDrawerNavigationController from './useDrawerNavigationController';
 
 const {Navigator, Screen} = createDrawerNavigator();
 
 const DrawerRoutes = () => {
+  const {screenOptions} = useDrawerNavigationController();
   return (
     <Navigator
       drawerContent={() => <DrawerContent />}
-      screenOptions={{
-        headerShown: false,
-        drawerPosition: 'right',
-        drawerType: 'slide',
-        overlayColor: 'transparent',
-        drawerStyle: {
-          width: 205,
-        },
-      }}>
+      screenOptions={screenOptions}>
       <Screen name="Home" component={Home} />
       <Screen
         options={{swipeEnabled: false}}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Internal from '../../../screens/Internal';
+import Internal from '~/screens/Internal';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DrawerRoutes from '~/navigation/DrawerNavigationRoutes';
 
